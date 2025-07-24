@@ -24,11 +24,11 @@ pipeline {
                 sh '''
                     mkdir -p .npm-cache
                     export npm_config_cache=$(pwd)/.npm-cache
-                    
+
                     ls
                     node -v
                     npm install
-                    npm build
+                    npm run build
                     ls
 
                 '''
