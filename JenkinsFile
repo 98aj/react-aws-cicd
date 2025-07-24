@@ -6,6 +6,13 @@ pipeline {
                 cleanWs()
             }
         }
+
+        stage('Checkout Code') {
+            steps {
+                checkout scm // Then fetch repo
+            }
+        }
+        
         stage ('build'){
             agent {
                 docker{
